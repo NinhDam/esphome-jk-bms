@@ -223,6 +223,9 @@ class JkBmsBle : public esphome::ble_client::BLEClientNode, public PollingCompon
   void set_charging_cycles_sensor(sensor::Sensor *charging_cycles_sensor) {
     charging_cycles_sensor_ = charging_cycles_sensor;
   }
+  void set_password_text_sensor(text_sensor::TextSensor *password_text_sensor) {
+    password_text_sensor_ = password_text_sensor;
+  }
   void set_total_charging_cycle_capacity_sensor(sensor::Sensor *total_charging_cycle_capacity_sensor) {
     total_charging_cycle_capacity_sensor_ = total_charging_cycle_capacity_sensor;
   }
