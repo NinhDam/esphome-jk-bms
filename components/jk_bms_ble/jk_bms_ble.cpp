@@ -157,6 +157,7 @@ void JkBmsBle::dump_config() {  // NOLINT(google-readability-function-size,reada
   LOG_SENSOR("", "Emergency Time Countdown", this->emergency_time_countdown_sensor_);
   LOG_SENSOR("", "Charge Status ID", this->charge_status_id_sensor_);
   LOG_SENSOR("", "Charge Status Time Elapsed", this->charge_status_time_elapsed_sensor_);
+  LOG_TEXT_SENSOR("", "Password", this->password_text_sensor_);
 
   LOG_TEXT_SENSOR("", "Operation Status", this->operation_status_text_sensor_);
   LOG_TEXT_SENSOR("", "Total Runtime Formatted", this->total_runtime_formatted_text_sensor_);
@@ -1571,6 +1572,7 @@ void JkBmsBle::publish_device_unavailable_() {
   this->publish_state_(balancing_current_sensor_, NAN);
   this->publish_state_(errors_bitmask_sensor_, NAN);
   this->publish_state_(heating_current_sensor_, NAN);
+  this->publish_state_(password_sensor_, NAN);
 
   for (auto &cell : this->cells_) {
     this->publish_state_(cell.cell_voltage_sensor_, NAN);
