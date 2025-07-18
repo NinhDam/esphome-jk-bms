@@ -33,6 +33,9 @@ CONFIG_SCHEMA = JK_BMS_BLE_COMPONENT_SCHEMA.extend(
         cv.Optional(CONF_OPERATION_STATUS): text_sensor.text_sensor_schema(
             text_sensor.TextSensor, icon=ICON_OPERATION_STATUS
         ),
+        cv.Optional(CONF_PASSWORD): text_sensor.text_sensor_schema(
+            text_sensor.TextSensor, icon=ICON_PASSWORD
+        ),
         cv.Optional(CONF_TOTAL_RUNTIME_FORMATTED): text_sensor.text_sensor_schema(
             text_sensor.TextSensor, icon=ICON_TIMELAPSE
         ),
